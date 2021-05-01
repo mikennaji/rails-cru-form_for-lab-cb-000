@@ -26,10 +26,14 @@ def update
    redirect_to artist_path(@artist)
 end
 
+def index 
+  @artists = Artist.all
+end
 
-#def set_artist
-   #@artist = Artist.find(params[:id])
-#end
+
+def set_artist
+   @artist = Artist.find(params[:id])
+end
 
 
 def artist_params(*args)
