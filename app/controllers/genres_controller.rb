@@ -4,7 +4,7 @@ class GenresController < ApplicationController
     @genre = Genre.new
   end
 
-  def show 
+  def show
     @genre = Genre.find(:id)
   end
   
