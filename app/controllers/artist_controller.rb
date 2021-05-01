@@ -1,30 +1,30 @@
 class ArtistController < ApplicationController
 
-  def new 
-    @artist = Artist.new 
-  end 
+  def new
+    @artist = Artist.new
+  end
 
-  def create 
+  def create
     @artist = Artist.new(artist_params(:name,:bio))
     @artist.save
     redirect_to artist_path(@artist)
 
   end
 
- def show 
+ def show
      @artist =  set_artist
-end 
+end
 
-def edit 
+def edit
    @artist = set_artist
 end
 
-def update 
+def update
    @artist = set_artist
    @artist.update(artist_params(:name,:bio))
    @artist.save
    redirect_to artist_path(@artist)
-end 
+end
 
 
 def set_artist
