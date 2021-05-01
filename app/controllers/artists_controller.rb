@@ -33,7 +33,7 @@ end
 
 
 def artist_params(*args)
-  params.require(:arist).permit(*args)
+  params.require(:artist).permit(*args)
 end
 
 end
