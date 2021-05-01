@@ -26,7 +26,7 @@ def update
    redirect_to artist_path(@artist)
 end
 
-def index 
+def index
   @artists = Artist.all
 end
 
