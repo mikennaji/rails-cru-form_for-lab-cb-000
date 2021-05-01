@@ -4,6 +4,10 @@ class GenresController < ApplicationController
     @genre = Genre.new
   end
 
+  def show 
+    @genre = Genre.find(:id)
+  end
+  
   def create
     @genre = Genre.new(genre_params(:name))
     @genre.save
