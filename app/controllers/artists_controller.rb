@@ -12,24 +12,24 @@ class ArtistsController < ApplicationController
   end
 
  def show
-     @artist =  set_artist
+     @artist = Artist.find(params[:id])
 end
 
 def edit
-   @artist = set_artist
+  @artist = Artist.find(params[:id])
 end
 
 def update
-   @artist = set_artist
+   @artist = Artist.find(params[:id])
    @artist.update(artist_params(:name,:bio))
    @artist.save
    redirect_to artist_path(@artist)
 end
 
 
-def set_artist
-   @artist = Artist.find(params[:id])
-end
+#def set_artist
+   #@artist = Artist.find(params[:id])
+#end
 
 
 def artist_params(*args)
